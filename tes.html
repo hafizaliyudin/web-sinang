@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: #ccc;
+            border-radius: 10px;
+        }
+
+        .box {
+            background-color: #fff;
+            position: relative;
+            height: 400px;
+            width: 400px;
+        }
+
+        .box:hover::before {
+            background: linear-gradient(180deg, #ff0000, #0b40d2);
+        }
+
+        .box .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 97%;
+            width: 97%;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="content">
+            <div style="padding: 10px;">tes</div>
+        </div>
+    </div>
+</body>
+
+</html>
